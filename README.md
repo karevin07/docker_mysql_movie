@@ -3,7 +3,7 @@
 
 build
 
-`$ docker build -t {iii/docker-mysql} .`
+`$ docker build -t iii/docker-mysql .`
 
 ================================================================================
 
@@ -15,11 +15,11 @@ run CONTAINER
 
 在CONTAINER內用ROOT以及設定的密碼登入MYSQL
 
-`$ docker exec -it dockerid /bin/bash`
+`$ docker exec -it containerid /bin/bash`
 
 ================================================================================
 
 mysql 查詢
 
-use BB105_03
-show tables;
+`$use BB105_03`
+`$use show tables;`
