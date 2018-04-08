@@ -22,4 +22,6 @@ run CONTAINER
 mysql 查詢
 
 `$use BB105_03`
-`$use show tables;`
+
+
+`$show tables;`
