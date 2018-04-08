@@ -1,0 +1,56 @@
+CREATE DATABASE BB105_03;
+
+use BB105_03
+
+CREATE TABLE movie_cf (
+movie int,
+C_name0 VARCHAR(500),
+year0 int,
+E_name0 VARCHAR(500),
+C_name1 VARCHAR(500),
+year1 int,
+E_name1 VARCHAR(500),
+similarity1 DOUBLE,
+url1 VARCHAR(500),
+C_name2 VARCHAR(500),
+year2 int,
+E_name2 VARCHAR(500),
+similarity2 DOUBLE,
+url2 VARCHAR(500),
+C_name3 VARCHAR(500),
+year3 int,
+E_name3 VARCHAR(500),
+similarity3 DOUBLE,
+url3 VARCHAR(500)
+);
+
+CREATE TABLE movie_km (
+C_name VARCHAR(500),
+tags1 VARCHAR(500),
+class1 VARCHAR(500),
+tags2 VARCHAR(500),
+class2 VARCHAR(500),
+views int,
+IDofIMDB VARCHAR(500),
+E_name VARCHAR(500),
+year int,
+url VARCHAR(500)
+);
+
+LOAD DATA LOCAL INFILE  '/mysql/output_final.csv'
+INTO TABLE movie_cf
+CHARACTER SET UTF8
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+
+LOAD DATA LOCAL INFILE  '/mysql/output.csv'
+INTO TABLE movie_km 
+CHARACTER SET UTF8
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
